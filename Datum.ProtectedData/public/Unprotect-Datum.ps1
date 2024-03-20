@@ -107,7 +107,7 @@ function Unprotect-Datum {
         }
         Write-verbose "Calling Unprotect-Data $($PSCmdlet.ParameterSetName)"
         Switch ($PSCmdlet.ParameterSetName) {
-            'ByCertificae' { $UnprotectDataParams.Add('Certificate', $Certificate)}
+            'ByCertificate' { $UnprotectDataParams.Add('Certificate', $Certificate)}
             'ByPassword' { $UnprotectDataParams.Add('Password', $Password)      }
         }
         Unprotect-Data @UnprotectDataParams
